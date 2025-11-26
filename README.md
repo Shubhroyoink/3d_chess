@@ -175,13 +175,14 @@ if chess.move(sr, sc, dr, dc):
 ---
 
 # 👤 Author
-This project is created and maintained by **you**, designed to make learning PyOpenGL and game architecture easier for beginners.
+This project is created and maintained by Shubhro Shekhar Das , designed to make learning PyOpenGL and game architecture easier for beginners.
 
 Feel free to modify, extend, or share this project.
 
 ---
 
 # 📄 License
-You may add any license you want (MIT recommended).
+
+MIT License
 
 
