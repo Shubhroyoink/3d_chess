@@ -1,0 +1,71 @@
+CHALLENGES FACED
+
+--OBJ Model Loading Problems
+    Early on, all model files loaded as:
+
+    Loaded Pawn.obj with 0 vertices
+
+    This happened because:
+    OBJ files were empty
+
+    Fix:
+    Replace all .obj files with proper 3D models
+    Scale and rotate models correctly in the scene
+
+--Slow Rendering Performance
+    High polycount models (12k–18k vertices per piece!) combined with Python loops caused:
+    -Low FPS
+    -Visible lag when moving camera
+    -Stuttering when drawing full board
+
+    Temporary fixes:
+    -Reduced lighting complexity
+    -Simplified draw loops
+    -Avoided unnecessary recalculations
+    -Removed expensive transformations
+
+--Implementing Online Multiplayer
+    Adding multiplayer inside a GLUT render loop was challenging:
+    -Avoid blocking calls (recv() freezes rendering)
+    -Required threading for listening to network updates
+    -Syncing host/client turn states
+    -Ensuring both boards stay identical
+    -Avoiding mismatched turns
+    -Handling connection refusal & timeouts
+
+    After fixes, LAN/local online play works with:
+    -Move synchronization
+    -Per-turn updates
+    -Host = White, Client = Black mapping
+
+--Large Single-File Codebas
+    main.py reached 1300+ lines, making it hard to:
+    -Debug
+    -Maintain
+    -Add features
+    -Collaborate
+    A modular architecture is being planned.
+
+
+SCOPE FOR IMPROVEMENT
+
+--Split Project Into Modules
+    -This improves scalability & readability.
+
+--Optimize 3D Models
+    -Your models are extremely high poly.
+    Improve performance by:
+    Using Blender to reduce polygons.
+
+--Add Animations
+    -Smooth piece movement
+    -Camera transitions
+    -Board flip effects
+    -Highlight-of-last-move
+    -This greatly improves user experience.
+
+--Improve Networking
+    -Use WebSockets
+    -Add matchmaking or lobby
+    -Reconnect support
+    -Spectator mode
