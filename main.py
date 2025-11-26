@@ -622,16 +622,10 @@ class Model:
         glBindBuffer(GL_ARRAY_BUFFER, 0)
 
 
-
-
-# ============================================================
-# === ORIGINAL GLOBALS, TRANSLATED FROM C++ ==================
-# ============================================================
-
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
-WINDOW_POS_X = 50
-WINDOW_POS_Y = 50
+WINDOW_POS_X = 51
+WINDOW_POS_Y = 51
 
 # Button defines not used in original code, kept for completeness
 BUTTON_X = -100
